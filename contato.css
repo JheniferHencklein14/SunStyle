@@ -1,0 +1,291 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.topo{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding-left: 20px;
+    background-color: white;
+    position: fixed;
+    box-shadow: 0 2px 8px rgba(100, 70, 40, 0.20);
+}
+
+.logo{
+    width: auto;
+    height: 30px;
+    margin-left: 15px;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end; /* Alinha à direita */
+    gap: 30px;                 /* Espaço entre os tópicos */
+    margin-right: 40px;        /* Espaço da borda direita */
+}
+
+nav a{
+    text-decoration: none; /* tira a barra de baixo */
+    color: #024959;
+    padding-bottom: 5px; /* espaço entre o texto e o risco*/
+    transition: 0.3s; /* transição da tela*/
+}
+
+nav a:hover {
+    color: #593e25; /* Muda a cor quando passar o mouse */
+}
+
+nav a.active {
+    color: #f2ae30; /* Cor do tópico selecionado */
+
+    border-bottom: 2px solid #f2ae30; /* Risco embaixo do tópico */
+}
+
+.contato {
+    width: 100%;
+    min-height: 750px;
+
+    padding-top: 100px;
+
+    background-color: white;
+}
+
+.contato h2 {
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-bottom: 55px;
+}
+
+.formulario {
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+.campos {
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.campos label,
+.mensagem label {
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.campos label span,
+.mensagem label span {
+    color: red;
+}
+
+
+.campos input,
+.campos select {
+    width: 100%;
+    height: 25px;
+
+    border: 1px solid #f5a623;
+    border-radius: 8px;
+
+    outline: none;
+
+    margin-bottom: 28px;
+
+    padding: 5px 10px;
+
+    background-color: white;
+}
+
+
+.mensagem {
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mensagem textarea {
+    width: 100%;
+    height: 110px;
+
+    border: 1px solid #f5a623;
+    border-radius: 8px;
+
+    outline: none;
+
+    resize: none;
+
+    padding: 8px 10px;
+
+    font-family: Arial, sans-serif;
+
+    margin-bottom: 8px;
+}
+
+.mensagem textarea::placeholder {
+    color: #bdbdbd;
+}
+
+.mensagem button {
+    width: 65px;
+    height: 28px;
+
+    align-self: flex-end;
+
+    border: none;
+
+    background-color: #f5a623;
+    color: white;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.aviso {
+    text-align: center;
+
+    font-size: 10px;
+
+    margin-top: 120px;
+}
+
+
+.rodape {
+    width: 100%;
+    height: 110px;
+
+    background-color: #f5ae24;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px;
+}
+
+
+.endereco {
+    font-size: 8px;
+    line-height: 1.25;
+}
+
+.redes {
+    font-size: 8px;
+    line-height: 1.25;
+
+    margin-left: 100px;
+}
+
+.logo-footer img {
+    width: 75px;
+    height: auto;
+}
+
+/*-----------footer----------------*/
+
+.footer {
+    margin-top: 2S5px;
+    width: 100%;
+    height: 120px;
+    background-color: #f5b32b;
+
+    display: flex;
+    align-items: center;
+
+    padding: 15px 20px;
+    position: relative;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    color: #000;
+}
+
+.footer-esquerda {
+    width: 35%;
+    line-height: 1.4;
+}
+
+.footer-centro {
+    width: 35%;
+    line-height: 1.3;
+}
+
+.footer-centro p {
+    margin: 0;
+}
+
+.footer-logo {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+
+/*------------responsividade--------*/
+
+@media (max-width: 900px) {
+
+    .menu {
+        gap: 35px;
+    }
+
+    .banner-texto {
+        width: 500px;
+    }
+
+    .produtos {
+        gap: 25px;
+    }
+
+    .rodape {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    /* Cabeçalho */
+    .cabecalho {
+        height: auto;
+        padding: 20px 5%;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
